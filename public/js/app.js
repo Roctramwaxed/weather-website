@@ -18,6 +18,9 @@ weatherForm.addEventListener('submit', (e) => {
         } else if (data.location === "jatiasih") {
             msgOne.textContent = data.location + ", rumah lo rik"
             msgTwo.textContent = data.forecastReport
+        } else {
+            msgOne.textContent = data.location
+            msgTwo.textContent = data.forecastReport
         }
     })
 })
