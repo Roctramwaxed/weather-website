@@ -15,7 +15,7 @@ weatherForm.addEventListener('submit', (e) => {
     response.json().then((data) => {
         if (data.error) {
             msgOne.textContent = data.error
-        } else if (data.location === "jatiasih") {
+        } else if (data.location === "Jatiasih") {
             msgOne.textContent = data.location + ", rumah lo rik"
             msgTwo.textContent = data.forecastReport
         } else {
