@@ -8,7 +8,11 @@ const forecast = (latitude, longitude, callback) => {
         } else if (body.error) {
             callback('Unable to determine location.', undefined)
         } else {
-            callback(undefined, body.current.weather_descriptions[0] + '. It is ' + body.current.temperature + ' degrees and feels like ' + body.current.feelslike + ' degrees.')
+            if (body.current.feelslike > 26) {
+                callback(undefined, body.current.weather_descriptions[0] + '. It is ' + body.current.temperature + ' degrees and feels like ' + body.current.feelslike + ' degrees. Panas bgt woi sumpah.')
+            } else {
+                callback(undefined, body.current.weather_descriptions[0] + '. It is ' + body.current.temperature + ' degrees and feels like ' + body.current.feelslike + ' degrees.')
+            }
         }
     })
 }
