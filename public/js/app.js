@@ -15,10 +15,7 @@ weatherForm.addEventListener('submit', (e) => {
     response.json().then((data) => {
         if (data.error) {
             msgOne.textContent = data.error
-        } else if (data.location === "Jatiasih, 17423, Bekasi, Jakarta, Indonesia") {
-            msgOne.textContent = data.location + ", rumah lo rik"
-            msgTwo.textContent = data.forecastReport
-        } else {
+        }  else {
             msgOne.textContent = data.location
             msgTwo.textContent = data.forecastReport
         }
